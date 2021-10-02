@@ -16,4 +16,5 @@ urlpatterns = [
     # path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     path('', include('django.contrib.auth.urls')),
     path('register/', views.Register.as_view(), name='register'),
+    path('edit/', views.Edit.as_view(), name='edit'),
 ]
