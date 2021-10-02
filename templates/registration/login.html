@@ -7,10 +7,11 @@
     {% if form.errors %}
         <p>
             Nazwa użytkownika lub hasło są nieprawidłowe.
-            Spróbuj poownie.
+            Spróbuj ponownie.
         </p>
     {% else %}
-        <p>Wypełnij poniższy formularz, aby się zalogować:</p>
+        <p>Wypełnij poniższy formularz, aby się zalogować.</p>
+        <p>Jeżeli nie masz jeszcze konta, możesz je utworzyć <a href="{% url 'register' %}">tutaj</a>.</p>
     {% endif %}
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">
