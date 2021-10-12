@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p$3j$7%*ndw0#eg5aidl7=4o(psgr^^8-m*zatc%#$6*2fj$c0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['moja-nowa-witryna.pl', 'www.moja-nowa-witryna.pl', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'MySocialNetwork',
+    'social_django',
+    # 'django_extensions',
 ]
 
 MIDDLEWARE = [
