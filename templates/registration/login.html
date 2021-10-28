@@ -18,8 +18,12 @@
             <li class="facebook"><a href="{% url "social:begin" "facebook" %}">
                 Zaloguj się za pomocą konta Facebook</a>
             </li>
+            <li class="google"><a href="{% url "social:begin" "google-oauth2" %}">
+                Zaloguj się za pomocą konta Google</a>
+            </li>
         </ul>
     </div>
+
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">
             {{ form.as_p }}
