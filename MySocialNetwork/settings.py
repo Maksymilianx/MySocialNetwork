@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'MySocialNetwork',
     'social_django',
     'django_extensions',
+    'images.apps.ImagesConfig',
 ]
 
 MIDDLEWARE = [
