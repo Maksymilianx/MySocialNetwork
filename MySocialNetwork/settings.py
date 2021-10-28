@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'MySocialNetwork',
     'social_django',
-    # 'django_extensions',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -146,4 +146,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.facebook.FacebookAppOAuth2',
 ]
+
+SOCIAL_AUTH_FACEBOOK_KEY = '617477535924794'
+SOCIAL_AUTH_FACEBOOK_SECRET = '940f20da85f15af7c3af70c964ce370d'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']

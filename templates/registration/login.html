@@ -10,9 +10,16 @@
             Spróbuj ponownie.
         </p>
     {% else %}
-        <p>Wypełnij poniższy formularz, aby się zalogować.</p>
-        <p>Jeżeli nie masz jeszcze konta, możesz je utworzyć <a href="{% url 'register' %}">tutaj</a>.</p>
+        <p>Wypełnij poniższy formularz, aby się zalogować.
+            Jeżeli nie masz jeszcze konta, możesz je utworzyć <a href="{% url 'register' %}">tutaj</a>.</p>
     {% endif %}
+        <div class="social">
+        <ul>
+            <li class="facebook"><a href="{% url "social:begin" "facebook" %}">
+                Zaloguj się za pomocą konta Facebook</a>
+            </li>
+        </ul>
+    </div>
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">
             {{ form.as_p }}
