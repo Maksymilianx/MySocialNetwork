@@ -29,3 +29,6 @@ class Image(models.Model):
             # obiekt zostaje zapisany, a wartości kolumny slug będą generowane automatycznie, aby user nie musiał robić
             # tego ręcznie dla każdego obrazu.
             super().save(*args, **kwargs)
+
+    # Użytkownik może polubić wiele zdjęć, oraz zdjęcie może być polubione przez wielu użytkowników.
+    users_like = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='images_liked', blank=True)
